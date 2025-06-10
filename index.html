@@ -1,272 +1,386 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Transport Kraków</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transport Kraków</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
 
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #f9fafb;
-      color: #1f2937;
-    }
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background-color: #f9fafb;
+        color: #1f2937;
+      }
 
-    header {
-      background: radial-gradient(circle, yellow 40%, green 100%);
-      color: black;
-      padding: 2rem;
-      text-align: center;
-      font-size: 3rem;
-      font-weight: 700;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-
-    .hero {
-      background: url('https://via.placeholder.com/1600x500?text=Meble+i+Pudła') center/cover no-repeat;
-      height: 500px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 2.5rem;
-      font-weight: 600;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .runner {
-      position: absolute;
-      bottom: 20px;
-      left: -150px;
-      width: 100px;
-      animation: runAcross 10s linear infinite;
-    }
-
-    @keyframes runAcross {
-      0% { left: -150px; }
-      100% { left: 110%; }
-    }
-
-    .content {
-      max-width: 1200px;
-      margin: 3rem auto;
-      padding: 0 2rem;
-      font-size: 1.2rem;
-    }
-
-    .card {
-      background-color: white;
-      padding: 2rem;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-      margin-bottom: 2rem;
-      transition: transform 0.3s ease;
-      font-size: 1.2rem;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    h2 {
-      color: #8e24aa;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    li {
-      margin-bottom: 0.5rem;
-    }
-
-    .btn-order {
-      display: inline-block;
-      background: radial-gradient(circle, yellow 40%, green 100%);
-      color: black;
-      padding: 1.2rem 2.5rem;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.2rem;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-      transition: background-color 0.3s ease;
-    }
-
-    .btn-order:hover {
-      filter: brightness(1.1);
-    }
-
-    .map {
-      width: 100%;
-      height: 400px;
-      border-radius: 16px;
-      overflow: hidden;
-      margin-top: 2rem;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    }
-
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 1rem;
-      border: 1px solid #cbd5e0;
-      border-radius: 8px;
-      font-size: 1.2rem;
-      font-family: 'Inter', sans-serif;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      font-size: 1.2rem;
-    }
-
-    footer {
-      background: radial-gradient(circle, yellow 40%, green 100%);
-      color: black;
-      text-align: center;
-      padding: 2rem;
-      font-size: 1.2rem;
-    }
-
-    @media (max-width: 768px) {
       header {
-        font-size: 2rem;
+        background: radial-gradient(circle, yellow 25%, green 100%);
+        color: black;
+        padding: 2rem;
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 700;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
       }
 
       .hero {
-        font-size: 1.8rem;
-        height: 300px;
+        background: url("https://scontent-waw2-2.xx.fbcdn.net/v/t39.30808-6/504927243_1428858141871802_6293943618665881324_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=FhhFS7zL4Z8Q7kNvwHqA8mu&_nc_oc=AdmsqAd7BpNcRP0AfD7Nq7gLW45QTeZwAAx2JOVeg7s7pn5TwcSLn8fBtZ7uz4-dc3w&_nc_zt=23&_nc_ht=scontent-waw2-2.xx&_nc_gid=Rb8dNTE4I0WBlk_3KyWQKQ&oh=00_AfOp3vHPnSZabaQLv4XopvEQfZ_yglXwZ8kKasJRm-AJ4A&oe=684DE10F")
+          center/cover no-repeat;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2.5rem;
+        font-weight: 600;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .runner {
+        position: absolute;
+        bottom: 20px;
+        left: -150px;
+        width: 100px;
+        animation: runAcross 10s linear infinite;
+      }
+
+      @keyframes runAcross {
+        0% {
+          left: -150px;
+        }
+        100% {
+          left: 110%;
+        }
+      }
+
+      .content {
+        max-width: 1200px;
+        margin: 3rem auto;
+        padding: 0 2rem;
+        font-size: 1.2rem;
       }
 
       .card {
-        padding: 1rem;
+        background-color: white;
+        padding: 2rem;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        margin-bottom: 2rem;
+        transition: transform 0.3s ease;
+        font-size: 1.2rem;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      h2 {
+        color: #8e24aa;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        padding-left: 1.2rem;
+      }
+
+      li {
+        margin-bottom: 0.5rem;
       }
 
       .btn-order {
-        padding: 1rem 2rem;
-        font-size: 1rem;
+        display: inline-block;
+        background: radial-gradient(circle, yellow 25%, green 100%);
+        color: black;
+        padding: 1.2rem 2.5rem;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.2rem;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
       }
-    }
-  </style>
-</head>
-<body>
-  <header>Usługi Transportowe Kraków i Okolice</header>
-  <div class="hero">
-    Gwarantujemy szybki i niezawodny transport 24/7
-    <img src="data:image/png;base64,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" class="runner" alt="Gruzownik">
-  </div>
-  <main class="content">
-    <div class="card">
-      <h2>Nasze Usługi</h2>
-      <ul>
-        <li>Przeprowadzki mieszkań i biur</li>
-        <li>Transport mebli i sprzętu AGD</li>
-        <li>Transport lokalny oraz międzymiastowy</li>
-        <li>Pomoc przy załadunku i rozładunku</li>
-      </ul>
-      <a href="#" class="btn-order">Zamów transport</a>
-    </div>
 
-    <div class="card">
-      <h2>Zamówienie Transportu</h2>
-      <form action="mailto:kontakt@transportkrakow.pl" method="POST" enctype="multipart/form-data">
-        <div class="form-group">
-          <label for="name">Imię i nazwisko</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="from">Adres początkowy</label>
-          <input type="text" id="from" name="from" required>
-        </div>
-        <div class="form-group">
-          <label for="to">Adres docelowy</label>
-          <input type="text" id="to" name="to" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Opis zlecenia</label>
-          <textarea id="message" name="message" rows="5"></textarea>
-        </div>
-        <div class="form-group">
-          <label for="upload">Dodaj zdjęcie ładunku (opcjonalnie)</label>
-          <input type="file" id="upload" name="upload" accept="image/*">
-        </div>
-        <button type="submit" class="btn-order">Wyślij zapytanie</button>
-      </form>
-    </div>
+      .btn-order:hover {
+        filter: brightness(1.1);
+      }
 
-    <div class="card">
+      .map {
+        width: 100%;
+        height: 400px;
+        border-radius: 16px;
+        overflow: hidden;
+        margin-top: 2rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid #cbd5e0;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        font-family: "Inter", sans-serif;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        font-size: 1.2rem;
+      }
+
+      footer {
+        background: radial-gradient(circle, yellow 40%, green 100%);
+        color: black;
+        text-align: center;
+        padding: 2rem;
+        font-size: 1.2rem;
+      }
+
+      @media (max-width: 768px) {
+        header {
+          font-size: 2rem;
+        }
+
+        .hero {
+          font-size: 1.8rem;
+          height: 300px;
+        }
+
+        .card {
+          padding: 1rem;
+        }
+
+        .btn-order {
+          padding: 1rem 2rem;
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>Usługi Transportowe Kraków i Okolice</header>
+    <div class="hero">
+      Gwarantujemy szybki i niezawodny transport 24/7
+      <img src="" class="runner" alt="Gruzownik" />
+    </div>
+    <main class="content">
       <div class="card">
-  <h2>Galeria</h2>
-  <p>Zobacz naszą pracę w akcji – od pakowania po bezpieczny transport!</p>
-
-  <!-- Galeria w siatce -->
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem;">
-    <img src="https://www.pereezd-ideal.ru/pictures/packing/1.jpg" alt="Pakowanie mebli" style="width:100%; border-radius: 12px;">
-    <img src="https://www.pereezd-ideal.ru/pictures/packing/2.jpg" alt="Ochrona ładunku" style="width:100%; border-radius: 12px;">
-    <img src="https://happyhouse.guru/uploads/posts/2023-03/thumbs/1679281409_happyhouse-guru-p-paketi-dlya-mebeli-mebel-krasivo-1.jpg" alt="Załadunek" style="width:100%; border-radius: 12px;">
-  </div>
-
-  <!-- Karuzela zdjęć -->
-  <div style="margin-top: 2rem; position: relative; overflow: hidden;">
-    <div id="carousel" style="white-space: nowrap; transition: transform 0.5s ease;">
-      <img src="https://a.storyblok.com/f/84636/1716x1132/1b22a005be/main_desktop-2x-88078de7b92f40a7e9120b00e718397d.jpeg/m/" style="width: 100%; max-width: 100%; display: inline-block; border-radius: 12px;">
-      <img src="https://static.tildacdn.pro/tild6365-6333-4231-b139-363833623533/perevozka-mebeli-2.jpg" style="width: 100%; max-width: 100%; display: inline-block; border-radius: 12px;">
-      <img src="https://studlib.org.ua/wp-content/uploads/2025/03/unnamed.jpg" style="width: 100%; max-width: 100%; display: inline-block; border-radius: 12px;">
-    </div>
-    <button onclick="prevSlide()" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); font-size: 2rem; background: none; border: none; cursor: pointer;">&#10094;</button>
-    <button onclick="nextSlide()" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); font-size: 2rem; background: none; border: none; cursor: pointer;">&#10095;</button>
-  </div>
-
-  <script>
-    let currentSlide = 0;
-    function nextSlide() {
-      const carousel = document.getElementById('carousel');
-      const slides = carousel.children.length;
-      currentSlide = (currentSlide + 1) % slides;
-      carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-    }
-    function prevSlide() {
-      const carousel = document.getElementById('carousel');
-      const slides = carousel.children.length;
-      currentSlide = (currentSlide - 1 + slides) % slides;
-      carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-    }
-  </script>
-</div>
-
-      <h2>Kontakt</h2>
-      <p>Telefon: <strong style="color:#d32f2f; font-size: 1.4rem;">+48 783 092 894</strong></p>
-      <p>Email: <a href="mailto:garasandrii@gmail.com" style="color: #8e24aa; text-decoration: none; font-size: 1.2rem;">kontakt@transportkrakow.pl</a></p>
-      <p>Adres: <strong style="font-size: 1.2rem;">Kraków, Władysława Łokietka 98/109</strong></p>
-    </div>
-    <div class="card">
-      <h2>Lokalizacja</h2>
-      <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.741831105684!2d19.916708376447067!3d50.07220551374192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165c2ed04cb157%3A0x7a9dff88dcda49dc!2sW%C5%82adys%C5%82awa%20%C5%81okietka%2098%2C%2031-334%20Krak%C3%B3w!5e0!3m2!1spl!2spl!4v1717513800000!5m2!1spl!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h2>Nasze Usługi</h2>
+        <ul>
+          <li>Przeprowadzki mieszkań i biur</li>
+          <li>Transport mebli i sprzętu AGD</li>
+          <li>Transport lokalny oraz międzymiastowy</li>
+          <li>Pomoc przy załadunku i rozładunku</li>
+        </ul>
+        <a href="#" class="btn-order">Zamów transport</a>
       </div>
-    </div>
-  </main>
-  <footer>
-    &copy; 2025 Transport Kraków | Szybko, tanio, profesjonalnie
-  </footer>
-</body>
+
+      <div class="card">
+        <h2>Zamówienie Transportu</h2>
+        <form
+          action="mailto:garasandrii@gmail.com"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <div class="form-group">
+            <label for="name">Imię i nazwisko</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="from">Adres początkowy</label>
+            <input type="text" id="from" name="from" required />
+          </div>
+          <div class="form-group">
+            <label for="to">Adres docelowy</label>
+            <input type="text" id="to" name="to" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Opis zlecenia</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="upload">Dodaj zdjęcie ładunku (opcjonalnie)</label>
+            <input type="file" id="upload" name="upload" accept="image/*" />
+          </div>
+          <button type="submit" class="btn-order">Wyślij zapytanie</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <div class="card">
+          <h2>Galeria</h2>
+          <p>
+            Zobacz naszą pracę w akcji – od pakowania po bezpieczny transport!
+          </p>
+
+          <!-- Galeria w siatce -->
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+              gap: 1rem;
+              margin-top: 1rem;
+            "
+          >
+            <img
+              src="https://www.pereezd-ideal.ru/pictures/packing/1.jpg"
+              alt="Pakowanie mebli"
+              style="width: 100%; border-radius: 12px"
+            />
+            <img
+              src="https://www.pereezd-ideal.ru/pictures/packing/2.jpg"
+              alt="Ochrona ładunku"
+              style="width: 100%; border-radius: 12px"
+            />
+            <img
+              src="https://happyhouse.guru/uploads/posts/2023-03/thumbs/1679281409_happyhouse-guru-p-paketi-dlya-mebeli-mebel-krasivo-1.jpg"
+              alt="Załadunek"
+              style="width: 100%; border-radius: 12px"
+            />
+          </div>
+
+          <!-- Karuzela zdjęć -->
+          <div style="margin-top: 2rem; position: relative; overflow: hidden">
+            <div
+              id="carousel"
+              style="white-space: nowrap; transition: transform 0.5s ease"
+            >
+              <img
+                src="https://a.storyblok.com/f/84636/1716x1132/1b22a005be/main_desktop-2x-88078de7b92f40a7e9120b00e718397d.jpeg/m/"
+                style="
+                  width: 100%;
+                  max-width: 100%;
+                  display: inline-block;
+                  border-radius: 12px;
+                "
+              />
+              <img
+                src="https://static.tildacdn.pro/tild6365-6333-4231-b139-363833623533/perevozka-mebeli-2.jpg"
+                style="
+                  width: 100%;
+                  max-width: 100%;
+                  display: inline-block;
+                  border-radius: 12px;
+                "
+              />
+              <img
+                src="https://studlib.org.ua/wp-content/uploads/2025/03/unnamed.jpg"
+                style="
+                  width: 100%;
+                  max-width: 100%;
+                  display: inline-block;
+                  border-radius: 12px;
+                "
+              />
+            </div>
+            <button
+              onclick="prevSlide()"
+              style="
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                transform: translateY(-50%);
+                font-size: 2rem;
+                background: none;
+                border: none;
+                cursor: pointer;
+              "
+            >
+              &#10094;
+            </button>
+            <button
+              onclick="nextSlide()"
+              style="
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                font-size: 2rem;
+                background: none;
+                border: none;
+                cursor: pointer;
+              "
+            >
+              &#10095;
+            </button>
+          </div>
+
+          <script>
+            let currentSlide = 0;
+            function nextSlide() {
+              const carousel = document.getElementById("carousel");
+              const slides = carousel.children.length;
+              currentSlide = (currentSlide + 1) % slides;
+              carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+            function prevSlide() {
+              const carousel = document.getElementById("carousel");
+              const slides = carousel.children.length;
+              currentSlide = (currentSlide - 1 + slides) % slides;
+              carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+          </script>
+        </div>
+
+        <h2>Kontakt</h2>
+        <p>
+          Telefon:
+          <strong style="color: #d32f2f; font-size: 1.4rem"
+            >+48 783 092 894</strong
+          >
+        </p>
+        <p>
+          Email:
+          <a
+            href="mailto:garasandrii@gmail.com"
+            style="color: #8e24aa; text-decoration: none; font-size: 1.2rem"
+            >kontakt@transportkrakow.pl</a
+          >
+        </p>
+        <p>
+          Adres:
+          <strong style="font-size: 1.2rem"
+            >Kraków, Władysława Łokietka 98/109</strong
+          >
+        </p>
+      </div>
+      <div class="card">
+        <h2>Lokalizacja</h2>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.741831105684!2d19.916708376447067!3d50.07220551374192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165c2ed04cb157%3A0x7a9dff88dcda49dc!2sW%C5%82adys%C5%82awa%20%C5%81okietka%2098%2C%2031-334%20Krak%C3%B3w!5e0!3m2!1spl!2spl!4v1717513800000!5m2!1spl!2spl"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </main>
+    <footer>
+      &copy; 2025 Transport Kraków | Szybko, tanio, profesjonalnie
+    </footer>
+  </body>
 </html>
