@@ -214,6 +214,45 @@
     </div>
 
     <div class="card">
+      <div class="card">
+  <h2>Galeria</h2>
+  <p>Zobacz naszą pracę w akcji – od pakowania po bezpieczny transport!</p>
+
+  <!-- Galeria w siatce -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem;">
+    <img src="https://images.unsplash.com/photo-1600566753084-b511d1a9e3db?auto=format&fit=crop&w=800&q=80" alt="Pakowanie mebli" style="width:100%; border-radius: 12px;">
+    <img src="https://images.unsplash.com/photo-1581090700227-1e8a6f7b8dfb?auto=format&fit=crop&w=800&q=80" alt="Ochrona ładunku" style="width:100%; border-radius: 12px;">
+    <img src="https://images.unsplash.com/photo-1594824476967-48c8b9642735?auto=format&fit=crop&w=800&q=80" alt="Załadunek" style="width:100%; border-radius: 12px;">
+  </div>
+
+  <!-- Karuzela zdjęć -->
+  <div style="margin-top: 2rem; position: relative; overflow: hidden;">
+    <div id="carousel" style="white-space: nowrap; transition: transform 0.5s ease;">
+      <img src="https://images.unsplash.com/photo-1603785220004-b6e96c293bb1?auto=format&fit=crop&w=800&q=80" style="width: 100%; max-width: 100%; display: inline-block; border-radius: 12px;">
+      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80" style="width: 100%; max-width: 100%; display: inline-block; border-radius: 12px;">
+      <img src="https://images.unsplash.com/photo-1616627986784-899d19430d2e?auto=format&fit=crop&w=800&q=80" style="width: 100%; max-width: 100%; display: inline-block; border-radius: 12px;">
+    </div>
+    <button onclick="prevSlide()" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); font-size: 2rem; background: none; border: none; cursor: pointer;">&#10094;</button>
+    <button onclick="nextSlide()" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); font-size: 2rem; background: none; border: none; cursor: pointer;">&#10095;</button>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    function nextSlide() {
+      const carousel = document.getElementById('carousel');
+      const slides = carousel.children.length;
+      currentSlide = (currentSlide + 1) % slides;
+      carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+    function prevSlide() {
+      const carousel = document.getElementById('carousel');
+      const slides = carousel.children.length;
+      currentSlide = (currentSlide - 1 + slides) % slides;
+      carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+  </script>
+</div>
+
       <h2>Kontakt</h2>
       <p>Telefon: <strong style="color:#d32f2f; font-size: 1.4rem;">+48 783 092 894</strong></p>
       <p>Email: <a href="mailto:garasandrii@gmail.com" style="color: #8e24aa; text-decoration: none; font-size: 1.2rem;">kontakt@transportkrakow.pl</a></p>
